@@ -4,6 +4,13 @@
     <link rel="stylesheet" type="text/css" href="./public/index.css">
     <title>Thermostat</title>
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <section>
+      <h1>Current temperature: <span id="current-temperature">20</span></h1>
+      <form id="select-city">
+        <input id="current-city" type="text" placeholder="Enter a city"></input>
+        <input type="submit"></input>
+      </form>
+    </section>
     <script>
       $(document).ready(function() {
         var thermostat = new Thermostat();
@@ -40,6 +47,15 @@
           $('#temperature').text(thermostat.temperature);
           $('#temperature').attr('class', thermostat.energyUsage());
         }
+
+        $('#select-city').submit(function(event) {
+          event.preventDefault();
+          var city = $('#current-city').val();
+          $.get('http://api.openweathermap.org/data/2.5/weather?q=' + city + '&appid=18d3693dce16b2223faaf49822a509a6&units=metric', function(data) {
+            $('#current-temperature').text(data.main.temp);
+          })
+        })
+
       });
     </script>
 
