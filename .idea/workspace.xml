@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1517db7b-763d-4582-be94-77247ff6bf05" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/jquery.min.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/spec/thermostatSpec.js" beforeDir="false" afterPath="$PROJECT_DIR$/spec/thermostatSpec.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/thermostat.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/thermostat.js" afterDir="false" />
     </list>
@@ -36,10 +39,22 @@
       <updated>1606904091342</updated>
       <workItem from="1606904107617" duration="63000" />
       <workItem from="1606904185581" duration="430000" />
+      <workItem from="1606988562136" duration="3139000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

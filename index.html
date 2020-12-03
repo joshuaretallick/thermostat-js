@@ -2,6 +2,13 @@
 <html>
   <head>
     <title>Thermostat</title>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        var thermostat = new Thermostat();
+        $('#temperature').text(thermostat.temperature);
+      })
+    </script>
   </head>
   <body>
     <section>
@@ -16,6 +23,5 @@
       </p>
     </section>
     <script src="src/thermostat.js"></script>
-    <script src="js/jquery.min.js"></script>
   </body>
 </html>
