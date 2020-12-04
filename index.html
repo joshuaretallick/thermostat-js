@@ -1,16 +1,29 @@
 <!DOCTYPE html>
 <html>
+ <div id="main">
+   <link rel="preconnect" href="https://fonts.gstatic.com">
+   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap" rel="stylesheet">
+    <style>
+      h1 {text-align: center;}
+      p {text-align: center;}
+      div {text-align: center;}
+      body {
+        background-image: url('https://images.unsplash.com/photo-1547754980-3df97fed72a8?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2100&q=80');
+        font-family: 'Noto Sans KR', serif;
+      }
+    </style>
+   <div class="title">
   <head>
     <link rel="stylesheet" type="text/css" href="./public/index.css">
     <title>Thermostat</title>
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-    <section>
-      <h1>Current temperature: <span id="current-temperature">20</span></h1>
-      <form id="select-city">
-        <input id="current-city" type="text" placeholder="Enter a city"></input>
-        <input type="submit"></input>
-      </form>
-    </section>
+      <h1>Current temperature: <span id="current-temperature">20</span> C</h1>
+      <select id="current-city">
+        <option value="london">London</option>
+        <option value="new york">New York</option>
+        <option value="paris">Paris</option>
+        <option value="tokyo">Tokyo</option>
+      </select>
     <script>
       $(document).ready(function() {
         var thermostat = new Thermostat();
@@ -48,11 +61,10 @@
           $('#temperature').attr('class', thermostat.energyUsage());
         }
 
-        $('#select-city').submit(function(event) {
-          event.preventDefault();
+        $('#current-city').change(function() {
           var city = $('#current-city').val();
-          $.get('http://api.openweathermap.org/data/2.5/weather?q=' + city + '&appid=18d3693dce16b2223faaf49822a509a6&units=metric', function(data) {
-            $('#current-temperature').text(data.main.temp);
+          $.get('http://api.openweathermap.org/data/2.5/weather?q=' + city + '&appid=a3d9eb01d4de82b9b8d0849ef604dbed&units=metric', function(data) {
+            $('#current-temperature').text(data.main.temp)
           })
         })
 
@@ -60,9 +72,12 @@
     </script>
 
   </head>
+   </div>
+    <br>
+  </div>
+    <div class="buttons">
   <body>
-    <section>
-      <h1 id="temperature"></h1>
+  <h1 id="temperature"></h1>
       <p>
         <button id="temperature-up">+</button>
         <button id="temperature-down">-</button>
@@ -71,7 +86,12 @@
         <button id="powersaving-on">PSM on</button>
         <button id="powersaving-off">PSM off</button>
       </p>
-    </section>
     <script src="src/thermostat.js"></script>
   </body>
+  </div>
+  </div>
+<br>
+ <div class="fire">
+ <img src="https://thumbs.gfycat.com/DeadlyLimpingDwarfmongoose-max-1mb.gif" img>
+ </div>
 </html>

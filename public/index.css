@@ -1,3 +1,45 @@
+#main {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.vertical-container {
+    height: 300px;
+    display: -webkit-flex;
+    display:         flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+
+.buttons {
+    max-width: 600px;
+    margin: 0 auto;
+    border: solid black 5px;
+    background: white;
+    opacity: 0.8;
+}
+
+.title {
+    max-width: 600px;
+    margin: 0 auto;
+    border: solid black 5px;
+    background: white;
+    opacity: 0.8;
+}
+
+.fire {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
 .low-usage {
     color: green;
 }
